@@ -5,6 +5,11 @@ import { User } from '../models/User.js';
 import jwt from 'jsonwebtoken';
 //import nodemailer from "nodemailer";
 
+const app = express();
+
+// Place this line before any route definitions
+app.use(express.json());
+
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
   const user = await User.findOne({ email });

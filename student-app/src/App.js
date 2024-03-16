@@ -13,13 +13,15 @@ import { Provider } from 'react-redux'
 import store from './redux/store.jsx'
 
 
+
 function App() {
   return (
     <BrowserRouter>
         <Provider store={store}>
+        
       <Routes>
-      <Route path="/" element={<Users />} />
-        <Route path="/signup" element={<Signup />} />
+      <Route path="/users" element={<Users />} />
+        <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/create" element={<CreateUser />} />
